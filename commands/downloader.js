@@ -423,7 +423,7 @@ cmd({
                 let infoYt = await ytdl.getInfo(urlYt);
 
                 let VidTime = Math.floor(i.timestamp* 60);
-		if( VidTime  >= videotime) return await citel.reply(`❌ Video file too big!`);
+		if( VidTime  >= videotime) return await citel.reply(`*🥺ඒක ලොකු වැඩී*!`);
                 let titleYt = infoYt.videoDetails.title;
                 let randomName = getRandom(".mp4");
                 const stream = ytdl(urlYt, {   filter: (info) => info.itag == 22 || info.itag == 18, })
@@ -436,7 +436,7 @@ cmd({
 		let buttonMessage = {
                         video: fs.readFileSync(`./${randomName}`),
                         mimetype: 'video/mp4',
-                        caption: "  •ʙʟᴀᴅᴇ271-ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ• " + Config.caption ,
+                        caption: "𝐊𝐈𝐍𝐆 𝐑𝐀𝐕𝐀𝐍𝐀 𝐌𝐃 : 𝙏𝙍𝘼𝙉𝙎𝙁𝙊𝙍𝙈𝙀𝙍 𝘾𝙊𝘿𝙀",
                     }
                  Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
                  return fs.unlinkSync(`./${randomName}`);
@@ -666,11 +666,11 @@ cmd({
         },
         async(Void, citel, text) => {
   
-                if (!text) return await citel.reply(`*_Ohh PLease, Give Me Song Name_*`);
+                if (!text) return await citel.reply(`*සින්දුවේ නම type කරන්න*`);
                 let yts = require("secktor-pack")
                 let search = await yts(text);
                 let i = search.all[1] ;
-                let cap = "\t *---Yt Song Searched Data---*   \n\nTitle : " + i.title + "\nUrl : " + i.url +"\nDescription : " + i.timestamp +"\nViews : "+i.views +"\nUploaded : " +i.ago +"\nAuthor : "+i.author.name+"\n\n\nReply 1 To Video \nReply 2 To Audio" ;
+                let cap = "\t **◈━━━━━━━━━━━━━◈*\n𝙆𝙄𝙉𝙂 𝙍𝘼𝙑𝘼𝙉𝘼 𝙈𝘿*\n*◈━━━━━━━━━━━━━◈* \n\n📃Title : " + i.title + "\n🖌️Url : " + i.url +"\n📝Description : " + i.timestamp +"\n👀Views : "+i.views +"\n🕓Uploaded : " +i.ago +"\n💁Author : "+i.author.name+"\n\n\n*1 : 𝙂𝙀𝙏 𝙑𝙄𝘿𝙀𝙊🎥*\n*2 : 𝙂𝙀𝙏 𝙏𝙊 𝙈𝙋3*" ;
                 Void.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
            
            
